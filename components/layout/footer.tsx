@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Mail, MapPin, Phone } from "lucide-react";
 import { siteConfig } from "@/lib/site-config";
 import { footerLinks } from "@/lib/homepage-data";
+import { Button } from "@/components/ui/button";
 
 export function Footer() {
   return (
@@ -63,12 +64,17 @@ export function Footer() {
       </div>
 
       <div className="border-t border-primary-foreground/10">
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-2 px-4 py-6 text-xs text-primary-foreground/60 sm:flex-row sm:px-6 lg:px-8">
+        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-4 py-6 text-xs text-primary-foreground/60 sm:flex-row sm:px-6 lg:px-8">
           <p>
             &copy; {new Date().getFullYear()} Study Insights. All rights
             reserved.
           </p>
-          <p>We build trust. We provide trust.</p>
+          <div className="flex items-center gap-3">
+            <Button asChild variant="default" size="sm">
+              <Link href="/admin">Admin Dashboard</Link>
+            </Button>
+            <p>We build trust. We provide trust.</p>
+          </div>
         </div>
       </div>
     </footer>
