@@ -3,6 +3,7 @@ import { ArrowRight, Quote } from "lucide-react";
 import { TeamCard } from "@/components/team-card";
 import { DestinationsShowcase } from "@/components/destinations-showcase";
 import { ScholarshipsList } from "@/components/scholarships-list";
+import { HeroImageStrip } from "@/components/hero-image-strip";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -27,8 +28,12 @@ export default function HomePage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative overflow-hidden bg-secondary/40">
-        <div className="mx-auto max-w-7xl px-4 py-20 text-center sm:px-6 lg:px-8 lg:py-28">
+      <section className="relative min-h-[calc(100svh-4.5rem)] overflow-hidden bg-secondary/40 sm:aspect-16/6 sm:min-h-0">
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-0 bg-[radial-gradient(60%_50%_at_50%_0%,var(--accent)/12%,transparent_70%)]"
+        />
+        <div className="relative mx-auto flex h-full max-w-7xl flex-col items-center justify-center px-4 py-16 text-center sm:px-6 lg:px-8">
           <Badge className="mx-auto w-fit rounded-full border-accent/20 bg-accent/10 px-3 py-1 text-xs font-semibold tracking-wide text-accent uppercase">
             Educational Consultancy Firm
           </Badge>
@@ -58,7 +63,7 @@ export default function HomePage() {
             </Button>
           </div>
 
-          <dl className="mx-auto mt-16 grid max-w-3xl grid-cols-3 gap-6 border-t border-border pt-8">
+          <dl className="mx-auto mt-12 grid max-w-3xl grid-cols-3 gap-6 border-t border-border pt-6">
             {heroStats.map((stat) => (
               <div key={stat.label}>
                 <dt className="text-3xl font-bold text-accent sm:text-4xl">
@@ -70,6 +75,8 @@ export default function HomePage() {
               </div>
             ))}
           </dl>
+
+          <HeroImageStrip />
         </div>
       </section>
 

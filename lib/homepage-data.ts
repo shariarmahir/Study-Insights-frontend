@@ -21,6 +21,17 @@ export const heroStats = [
   { value: "All", label: "Scholarship Segments Covered" },
 ];
 
+export const heroImages = [
+  { file: "graduation-cap.jpg", alt: "Graduation day" },
+  { file: "campus-life.jpg", alt: "Campus life abroad" },
+  { file: "world-map.jpg", alt: "Study destinations worldwide" },
+  { file: "scholarship.jpg", alt: "Scholarship recipients" },
+  { file: "visa-approved.jpg", alt: "Visa success" },
+  { file: "library.jpg", alt: "Academic excellence" },
+  { file: "travel.jpg", alt: "New beginnings abroad" },
+  { file: "community.jpg", alt: "Student community" },
+];
+
 export const featureStrip = [
   { icon: Globe2, value: "Multiple", label: "Countries Covered" },
   { icon: Handshake, value: "End to End", label: "Services" },
